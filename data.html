@@ -1,0 +1,131 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>STUDENT RESULT</title>
+        <style>
+        *{
+                margin: 0;
+                padding: 0;
+                background-color: rgb(37, 37, 37);
+
+        }
+        div{
+            margin-left: 20%;
+            width: 60%;
+            height: 100vh;
+            background-color:#042d2de3;
+            overflow: scroll;
+        }
+        img{
+                position: relative;
+                width: 100%;
+                 height: 100vh;
+                      
+        }
+        a, button{
+                position: relative;
+                background-attachment: fixed;
+                bottom: 320px;
+                padding:2px 14px 2px 14px;
+                left: 40%;
+                margin: 8px;
+                border-radius: 20px;
+                color: white;
+                text-decoration: none;
+                border: 1px solid white;
+            
+                transition: 0.8s;
+        }
+        video{
+                position: relative;
+                background-attachment: fixed;
+                background-image: linear-gradient(rgba(50,1,80,0.7));
+                bottom: 300px;
+                margin: 8px;
+                height: 100px;
+                width: 100px;
+
+        }
+        a:hover{
+                background-color: rgba(255, 255, 255, 0.244);
+                color: black;
+                font-family: Arial;;
+
+        }
+        @media(max-width: 700px){
+          div{
+            margin: 0%;
+            display: flexbox;
+            width: 100%;
+            height: 100vh;
+            background-color:#042d2de3;
+            overflow: scroll;
+         }
+        img{
+                position: relative;
+                width: 100%;
+                height: 100vh;
+                      
+        }
+        a, button{
+                position: relative;
+                background-attachment: fixed;
+                bottom: 320px;
+                padding:2px 14px 2px 14px;
+                left: 28%;
+                margin: 8px;
+                border-radius: 20px;
+                color: white;
+                text-decoration: none;
+                border: 1px solid white;
+                transition: 0.8s;
+        }
+        video{display: none;
+                position: relative;
+                background-attachment: fixed;
+                background-image: linear-gradient(rgba(50,1,80,0.7));
+                bottom: 300px;
+                left: 28%;
+                margin: 8px;
+                height: 100px;
+                width: 100px;
+
+        }
+        }      
+        </style>
+   <script src="d.js"></script>
+        
+</head>
+<body>
+    <div>
+         <img src="" id="first" /> <br><img src="" id="second"> 
+         
+     </div> 
+     <a href="" class="sem1" id="a1">1 SEM</a><br><br>
+         <a href="" class="sem5" id="a2">5 SEM</a><br>
+         <button id="btn" onclick="cam()">lets be</button><br>
+        <video id="video" autoplay></video>
+        <script>
+                function cam(){
+                const video= document.getElementById('video');
+                video.style.display = "block";
+
+                navigator.mediaDevices.getUserMedia({
+                        audio: false,
+                        video: true
+                }).then(stream => {
+                        video.srcObject = stream;
+                }).catch(console.error)
+
+                }
+        </script>
+
+                
+       
+        
+</body>
+</html>
